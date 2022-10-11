@@ -1,7 +1,7 @@
 ﻿# Problem 1
 $i = 90
 while ($i -le 100) {
-    Write-Host $i
+    echo $i
     $i += 7
 }
 
@@ -10,14 +10,14 @@ $favoriteFoods = @()
 for ($i = 0; $i -lt 5; $i++) {
     $favoriteFoods += Read-Host -Prompt "Enter your favorite food"
 }
-Write-Host $favoriteFoods
+echo $favoriteFoods
 
 
 # Problem 3
 $nums = @(1..20)
 foreach ($n in $nums) {
     if ($n % 6 -eq 0) {
-        Write-Host $n
+        echo $n
     }
 }
 
@@ -25,7 +25,7 @@ foreach ($n in $nums) {
 $found = $false
 foreach ($n in $nums) {
     if ($n % 4 -eq 0) {
-        Write-Host $n
+        echo $n
         if ($found -eq $true) {
             break
         }
@@ -39,11 +39,12 @@ $favoriteCharacters = @()
 do {
     $favoriteCharacters += Read-Host -Prompt "What is your favorite Star Wars character?"
 } while ($favoriteCharacters.Length -lt 4)
-Write-Host $favoriteCharacters
+echo $favoriteCharacters
 
-# Problem 6
-for ($i = 1; $i -le 5; $i++) {
-    $line = " " * (5 - $i) + "*" * $i
-    Write-Host $line
+# Problem 6 
+$numLines = 5
+for ($i = 1; $i -le $numLines; $i++) {
+    $line = " " * ($numLines - $i) + "*" * $i
+    echo $line
 }
     

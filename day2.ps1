@@ -7,9 +7,9 @@ Write-Output $numbers # Newline separated
 $a = 335
 $b = 334
 if ($a -lt $b) {
-    Write-Host "This statement is true"
+    echo "This statement is true"
 } else {
-    Write-Host "This statement is false"
+    echo "This statement is false"
 }
 
 # Problem 4
@@ -17,9 +17,9 @@ $favoriteWord = Read-Host -Prompt "What is your favorite word?"
 
 # Problems 5 and 6
 if (($a -gt $b) -and ($favoriteWord -eq "Anki")) {
-    Write-Host $favoriteWord
+    echo $favoriteWord
 } elseif (($a -gt $b) -or ($favoriteWord -eq "Anki")) {
-    Write-Host "Partially Correct"
+    echo "Partially Correct"
 } else {
-    Write-Host "WRONG!"
+    echo "WRONG!"
 }
