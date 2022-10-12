@@ -47,4 +47,42 @@ for ($i = 1; $i -le $numLines; $i++) {
     $line = " " * ($numLines - $i) + "*" * $i
     echo $line
 }
-    
+
+# Video For Loop Exercise
+$students = @()
+$null > EvenNames.txt
+$null > OddNames.txt
+[int]$numStudents = Read-Host "How many students are in the class?"
+for ($i = 1; $i -le $numStudents; $i++) {
+    $name = Read-Host "Enter student $i`'s name"
+    $students += $name
+    if ($name.Length %2 -eq 0) {
+        $name >> EvenNames.txt
+    } else {
+        $name >> OddNames.txt
+    }
+}
+
+
+# Video Foreach loop exercise
+$names = @("Bob", "John", "Joey", "Janet", "Annie", "Brandon")
+$ANames = @()
+foreach ($name in $names) {
+    if ($name.IndexOf("a") -ge 0) {
+        $ANames += $name
+    }
+}
+$ANames
+
+# Video Exercise 4
+$i = 0
+do {
+    $i
+    $i += 2
+} until ($i -gt 20)
+
+$i = 0
+do {
+    $i
+    $i += 2
+} while ($i -le 20)
